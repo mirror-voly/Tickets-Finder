@@ -28,13 +28,13 @@ struct ShowAllTicketsView: View {
                                 .resizable()
                                 .frame(width: 24, height: 24)
                                 .tint(Color(hex: 0x2261BC))
-                            
                         })
                     })
                     
                     VStack(alignment: .leading, spacing: 4, content: {
                         Text("\(global.fromWhereString)-\(global.toWhereString)")
                             .font(Font.custom("SFProDisplay-Medium", size: 16))
+                            .bold()
                         Text("\(global.flightDate, format: .dateTime.day()) \(global.flightDate, format: .dateTime.month()), 1 пассажир").textCase(.lowercase)
                             .foregroundStyle(Color(hex: 0x9F9F9F))
                             .font(Font.custom("SFProDisplay-Regular", size: 14))

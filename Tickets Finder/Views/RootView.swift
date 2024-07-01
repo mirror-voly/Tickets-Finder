@@ -65,7 +65,6 @@ struct RootView: View {
             }
         }
     }
-
 }
 
 #Preview {

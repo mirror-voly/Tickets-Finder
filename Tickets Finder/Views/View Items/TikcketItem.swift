@@ -53,7 +53,9 @@ struct TikcketItem: View {
                                             .frame(width: 10, height: 2)
                                             .foregroundStyle(Color(hex: 0x9F9F9F))
                                         Spacer()
-                                    }).frame(height: 25)
+                                            .frame(height: 15)
+                                        
+                                    })
                                     
                                     
                                     VStack(alignment: .leading, content: {

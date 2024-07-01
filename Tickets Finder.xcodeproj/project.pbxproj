@@ -12,6 +12,7 @@
 		5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */; };
 		5171A9582C329D5D009DD663 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */; };
 		5171A95C2C329E86009DD663 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */; };
+		5171A95E2C32AF25009DD663 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A95D2C32AF25009DD663 /* SF-Pro-Display-RegularItalic.otf */; };
 		51757FE42C2C03EF002BB483 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 51757FE32C2C03EF002BB483 /* flights.json */; };
 		51757FE62C2C0B0C002BB483 /* DirectFlightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FE52C2C0B0C002BB483 /* DirectFlightItem.swift */; };
 		51757FE82C2C0CF6002BB483 /* DirectFlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FE72C2C0CF6002BB483 /* DirectFlightModel.swift */; };
@@ -68,6 +69,7 @@
 		5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		5171A95D2C32AF25009DD663 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
 		51757FE32C2C03EF002BB483 /* flights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flights.json; sourceTree = "<group>"; };
 		51757FE52C2C0B0C002BB483 /* DirectFlightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectFlightItem.swift; sourceTree = "<group>"; };
 		51757FE72C2C0CF6002BB483 /* DirectFlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectFlightModel.swift; sourceTree = "<group>"; };
@@ -148,8 +150,9 @@
 		5171A9522C329ADE009DD663 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */,
 				5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */,
+				5171A95D2C32AF25009DD663 /* SF-Pro-Display-RegularItalic.otf */,
+				5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */,
 				5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
@@ -376,6 +379,7 @@
 				51A1E8482C1AD69A007754CE /* Assets.xcassets in Resources */,
 				5171A9582C329D5D009DD663 /* SF-Pro-Display-Regular.otf in Resources */,
 				51757FEC2C2C41D8002BB483 /* allTickets.json in Resources */,
+				5171A95E2C32AF25009DD663 /* SF-Pro-Display-RegularItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

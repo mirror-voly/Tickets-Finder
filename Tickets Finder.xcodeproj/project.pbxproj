@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		516BFD1C2C2DE97A000A0B63 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */; };
+		516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D54D42C20A1540016AAC2 /* EmptyView.swift */; };
+		5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */; };
+		5171A9582C329D5D009DD663 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */; };
+		5171A95C2C329E86009DD663 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */; };
+		51757FE42C2C03EF002BB483 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 51757FE32C2C03EF002BB483 /* flights.json */; };
+		51757FE62C2C0B0C002BB483 /* DirectFlightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FE52C2C0B0C002BB483 /* DirectFlightItem.swift */; };
+		51757FE82C2C0CF6002BB483 /* DirectFlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FE72C2C0CF6002BB483 /* DirectFlightModel.swift */; };
+		51757FEA2C2C166C002BB483 /* JSONTicketsOffersReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FE92C2C166C002BB483 /* JSONTicketsOffersReader.swift */; };
+		51757FEC2C2C41D8002BB483 /* allTickets.json in Resources */ = {isa = PBXBuildFile; fileRef = 51757FEB2C2C41D7002BB483 /* allTickets.json */; };
+		51757FF02C2C79D0002BB483 /* ShowAllTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FEF2C2C79D0002BB483 /* ShowAllTicketsView.swift */; };
+		51757FF22C2C89DB002BB483 /* TikcketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51757FF12C2C89DB002BB483 /* TikcketItem.swift */; };
+		5176DF312C24179000CA56AB /* WhereToGoModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176DF302C24179000CA56AB /* WhereToGoModalView.swift */; };
+		517759D52C295FCF00AD40E2 /* DatePopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517759D42C295FCF00AD40E2 /* DatePopoverView.swift */; };
+		517854CF2C2D74BE0054DE63 /* AllTicketsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517854CE2C2D74BE0054DE63 /* AllTicketsInfoModel.swift */; };
+		517854D12C2D75790054DE63 /* JSONShowAllTicketsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517854D02C2D75790054DE63 /* JSONShowAllTicketsReader.swift */; };
+		519D52E32C21E0E800EDC9C7 /* offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 519D52E22C21E0E800EDC9C7 /* offers.json */; };
+		519D52E52C21E17C00EDC9C7 /* JSONColabOffersReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D52E42C21E17C00EDC9C7 /* JSONColabOffersReader.swift */; };
+		519D52E72C21E1B200EDC9C7 /* ColabOffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D52E62C21E1B200EDC9C7 /* ColabOffersModel.swift */; };
+		51A1E8442C1AD699007754CE /* Tickets_FinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1E8432C1AD699007754CE /* Tickets_FinderApp.swift */; };
+		51A1E8462C1AD699007754CE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1E8452C1AD699007754CE /* StartView.swift */; };
+		51A1E8482C1AD69A007754CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1E8472C1AD69A007754CE /* Assets.xcassets */; };
+		51A1E84B2C1AD69A007754CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1E84A2C1AD69A007754CE /* Preview Assets.xcassets */; };
+		51A1E8552C1AD69A007754CE /* Tickets_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1E8542C1AD69A007754CE /* Tickets_FinderTests.swift */; };
+		51A1E85F2C1AD69B007754CE /* Tickets_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1E85E2C1AD69B007754CE /* Tickets_FinderUITests.swift */; };
+		51A1E8612C1AD69B007754CE /* Tickets_FinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1E8602C1AD69B007754CE /* Tickets_FinderUITestsLaunchTests.swift */; };
+		51ACA29A2C22A9AF00EC050D /* WhereToGoHintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACA2992C22A9AF00EC050D /* WhereToGoHintsView.swift */; };
+		51ACA29C2C22BFD300EC050D /* WhereToGoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACA29B2C22BFD300EC050D /* WhereToGoItem.swift */; };
+		51ACA29E2C22D3FF00EC050D /* Extention + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACA29D2C22D3FF00EC050D /* Extention + Color.swift */; };
+		51B625942C2EA6F8007DA70A /* SearchStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B625932C2EA6F8007DA70A /* SearchStartedView.swift */; };
+		51B625962C2ECB96007DA70A /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B625952C2ECB96007DA70A /* Calculate.swift */; };
+		51BE57D22C2EF51800B8D6F1 /* SearchExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE57D12C2EF51800B8D6F1 /* SearchExampleItem.swift */; };
+		51BE57D42C2F00A200B8D6F1 /* Extention + Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE57D32C2F00A200B8D6F1 /* Extention + Character.swift */; };
+		51BE57D62C2F0E3900B8D6F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */; };
+		51BFEFB42C1CAC6A0097585A /* MusicOfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */; };
+		51EF7B9B2C1DA1C70016177C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF7B9A2C1DA1C70016177C /* RootView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51A1E8512C1AD69A007754CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A1E8382C1AD699007754CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51A1E83F2C1AD699007754CE;
+			remoteInfo = "Tickets Finder";
+		};
+		51A1E85B2C1AD69B007754CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A1E8382C1AD699007754CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51A1E83F2C1AD699007754CE;
+			remoteInfo = "Tickets Finder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		516D54D42C20A1540016AAC2 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		51757FE32C2C03EF002BB483 /* flights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flights.json; sourceTree = "<group>"; };
+		51757FE52C2C0B0C002BB483 /* DirectFlightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectFlightItem.swift; sourceTree = "<group>"; };
+		51757FE72C2C0CF6002BB483 /* DirectFlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectFlightModel.swift; sourceTree = "<group>"; };
+		51757FE92C2C166C002BB483 /* JSONTicketsOffersReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTicketsOffersReader.swift; sourceTree = "<group>"; };
+		51757FEB2C2C41D7002BB483 /* allTickets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allTickets.json; sourceTree = "<group>"; };
+		51757FEF2C2C79D0002BB483 /* ShowAllTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllTicketsView.swift; sourceTree = "<group>"; };
+		51757FF12C2C89DB002BB483 /* TikcketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikcketItem.swift; sourceTree = "<group>"; };
+		5176DF302C24179000CA56AB /* WhereToGoModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToGoModalView.swift; sourceTree = "<group>"; };
+		517759D42C295FCF00AD40E2 /* DatePopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopoverView.swift; sourceTree = "<group>"; };
+		517854CE2C2D74BE0054DE63 /* AllTicketsInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTicketsInfoModel.swift; sourceTree = "<group>"; };
+		517854D02C2D75790054DE63 /* JSONShowAllTicketsReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONShowAllTicketsReader.swift; sourceTree = "<group>"; };
+		5187FFF02C305A9B00D4A806 /* Tickets-Finder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tickets-Finder-Info.plist"; sourceTree = SOURCE_ROOT; };
+		519D52E22C21E0E800EDC9C7 /* offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = offers.json; sourceTree = "<group>"; };
+		519D52E42C21E17C00EDC9C7 /* JSONColabOffersReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONColabOffersReader.swift; sourceTree = "<group>"; };
+		519D52E62C21E1B200EDC9C7 /* ColabOffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColabOffersModel.swift; sourceTree = "<group>"; };
+		51A1E8402C1AD699007754CE /* Tickets Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tickets Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A1E8432C1AD699007754CE /* Tickets_FinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets_FinderApp.swift; sourceTree = "<group>"; };
+		51A1E8452C1AD699007754CE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		51A1E8472C1AD69A007754CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51A1E84A2C1AD69A007754CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51A1E8502C1AD69A007754CE /* Tickets FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tickets FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A1E8542C1AD69A007754CE /* Tickets_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets_FinderTests.swift; sourceTree = "<group>"; };
+		51A1E85A2C1AD69B007754CE /* Tickets FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tickets FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A1E85E2C1AD69B007754CE /* Tickets_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets_FinderUITests.swift; sourceTree = "<group>"; };
+		51A1E8602C1AD69B007754CE /* Tickets_FinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets_FinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51ACA2992C22A9AF00EC050D /* WhereToGoHintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToGoHintsView.swift; sourceTree = "<group>"; };
+		51ACA29B2C22BFD300EC050D /* WhereToGoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToGoItem.swift; sourceTree = "<group>"; };
+		51ACA29D2C22D3FF00EC050D /* Extention + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Color.swift"; sourceTree = "<group>"; };
+		51B625932C2EA6F8007DA70A /* SearchStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStartedView.swift; sourceTree = "<group>"; };
+		51B625952C2ECB96007DA70A /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		51BE57D12C2EF51800B8D6F1 /* SearchExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchExampleItem.swift; sourceTree = "<group>"; };
+		51BE57D32C2F00A200B8D6F1 /* Extention + Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Character.swift"; sourceTree = "<group>"; };
+		51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicOfferItem.swift; sourceTree = "<group>"; };
+		51EF7B9A2C1DA1C70016177C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51A1E83D2C1AD699007754CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E84D2C1AD69A007754CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E8572C1AD69B007754CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		516D54DC2C20A1CB0016AAC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51EF7B9A2C1DA1C70016177C /* RootView.swift */,
+				51A1E8452C1AD699007754CE /* StartView.swift */,
+				5176DF302C24179000CA56AB /* WhereToGoModalView.swift */,
+				51B625932C2EA6F8007DA70A /* SearchStartedView.swift */,
+				517759D42C295FCF00AD40E2 /* DatePopoverView.swift */,
+				51ACA2992C22A9AF00EC050D /* WhereToGoHintsView.swift */,
+				51757FEF2C2C79D0002BB483 /* ShowAllTicketsView.swift */,
+				51B625972C2ED0EB007DA70A /* View Items */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5171A9522C329ADE009DD663 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5171A95B2C329E86009DD663 /* SF-Pro-Display-Medium.otf */,
+				5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */,
+				5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		519D52E82C21F13100EDC9C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5171A9522C329ADE009DD663 /* Fonts */,
+				516D54D42C20A1540016AAC2 /* EmptyView.swift */,
+				51ACA29D2C22D3FF00EC050D /* Extention + Color.swift */,
+				51BE57D32C2F00A200B8D6F1 /* Extention + Character.swift */,
+				519D52E22C21E0E800EDC9C7 /* offers.json */,
+				51757FE32C2C03EF002BB483 /* flights.json */,
+				51757FEB2C2C41D7002BB483 /* allTickets.json */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		519D52E92C21F15300EDC9C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				519D52E62C21E1B200EDC9C7 /* ColabOffersModel.swift */,
+				51757FE72C2C0CF6002BB483 /* DirectFlightModel.swift */,
+				517854CE2C2D74BE0054DE63 /* AllTicketsInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		519D52EA2C21F1A500EDC9C7 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */,
+				51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */,
+				51B625952C2ECB96007DA70A /* Calculate.swift */,
+				519D52E42C21E17C00EDC9C7 /* JSONColabOffersReader.swift */,
+				51757FE92C2C166C002BB483 /* JSONTicketsOffersReader.swift */,
+				517854D02C2D75790054DE63 /* JSONShowAllTicketsReader.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		51A1E8372C1AD699007754CE = {
+			isa = PBXGroup;
+			children = (
+				51A1E8422C1AD699007754CE /* Tickets Finder */,
+				51A1E8532C1AD69A007754CE /* Tickets FinderTests */,
+				51A1E85D2C1AD69B007754CE /* Tickets FinderUITests */,
+				51A1E8412C1AD699007754CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51A1E8412C1AD699007754CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51A1E8402C1AD699007754CE /* Tickets Finder.app */,
+				51A1E8502C1AD69A007754CE /* Tickets FinderTests.xctest */,
+				51A1E85A2C1AD69B007754CE /* Tickets FinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51A1E8422C1AD699007754CE /* Tickets Finder */ = {
+			isa = PBXGroup;
+			children = (
+				5187FFF02C305A9B00D4A806 /* Tickets-Finder-Info.plist */,
+				51A1E8432C1AD699007754CE /* Tickets_FinderApp.swift */,
+				519D52E92C21F15300EDC9C7 /* Models */,
+				516D54DC2C20A1CB0016AAC2 /* Views */,
+				519D52EA2C21F1A500EDC9C7 /* ModelView */,
+				51A1E8472C1AD69A007754CE /* Assets.xcassets */,
+				519D52E82C21F13100EDC9C7 /* Helpers */,
+				51A1E8492C1AD69A007754CE /* Preview Content */,
+			);
+			path = "Tickets Finder";
+			sourceTree = "<group>";
+		};
+		51A1E8492C1AD69A007754CE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				51A1E84A2C1AD69A007754CE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51A1E8532C1AD69A007754CE /* Tickets FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				51A1E8542C1AD69A007754CE /* Tickets_FinderTests.swift */,
+			);
+			path = "Tickets FinderTests";
+			sourceTree = "<group>";
+		};
+		51A1E85D2C1AD69B007754CE /* Tickets FinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				51A1E85E2C1AD69B007754CE /* Tickets_FinderUITests.swift */,
+				51A1E8602C1AD69B007754CE /* Tickets_FinderUITestsLaunchTests.swift */,
+			);
+			path = "Tickets FinderUITests";
+			sourceTree = "<group>";
+		};
+		51B625972C2ED0EB007DA70A /* View Items */ = {
+			isa = PBXGroup;
+			children = (
+				51757FF12C2C89DB002BB483 /* TikcketItem.swift */,
+				51757FE52C2C0B0C002BB483 /* DirectFlightItem.swift */,
+				51ACA29B2C22BFD300EC050D /* WhereToGoItem.swift */,
+				51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */,
+				51BE57D12C2EF51800B8D6F1 /* SearchExampleItem.swift */,
+			);
+			path = "View Items";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51A1E83F2C1AD699007754CE /* Tickets Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51A1E8642C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets Finder" */;
+			buildPhases = (
+				51A1E83C2C1AD699007754CE /* Sources */,
+				51A1E83D2C1AD699007754CE /* Frameworks */,
+				51A1E83E2C1AD699007754CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tickets Finder";
+			productName = "Tickets Finder";
+			productReference = 51A1E8402C1AD699007754CE /* Tickets Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51A1E84F2C1AD69A007754CE /* Tickets FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51A1E8672C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets FinderTests" */;
+			buildPhases = (
+				51A1E84C2C1AD69A007754CE /* Sources */,
+				51A1E84D2C1AD69A007754CE /* Frameworks */,
+				51A1E84E2C1AD69A007754CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51A1E8522C1AD69A007754CE /* PBXTargetDependency */,
+			);
+			name = "Tickets FinderTests";
+			productName = "Tickets FinderTests";
+			productReference = 51A1E8502C1AD69A007754CE /* Tickets FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51A1E8592C1AD69B007754CE /* Tickets FinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51A1E86A2C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets FinderUITests" */;
+			buildPhases = (
+				51A1E8562C1AD69B007754CE /* Sources */,
+				51A1E8572C1AD69B007754CE /* Frameworks */,
+				51A1E8582C1AD69B007754CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51A1E85C2C1AD69B007754CE /* PBXTargetDependency */,
+			);
+			name = "Tickets FinderUITests";
+			productName = "Tickets FinderUITests";
+			productReference = 51A1E85A2C1AD69B007754CE /* Tickets FinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51A1E8382C1AD699007754CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					51A1E83F2C1AD699007754CE = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					51A1E84F2C1AD69A007754CE = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 51A1E83F2C1AD699007754CE;
+					};
+					51A1E8592C1AD69B007754CE = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 51A1E83F2C1AD699007754CE;
+					};
+				};
+			};
+			buildConfigurationList = 51A1E83B2C1AD699007754CE /* Build configuration list for PBXProject "Tickets Finder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51A1E8372C1AD699007754CE;
+			productRefGroup = 51A1E8412C1AD699007754CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51A1E83F2C1AD699007754CE /* Tickets Finder */,
+				51A1E84F2C1AD69A007754CE /* Tickets FinderTests */,
+				51A1E8592C1AD69B007754CE /* Tickets FinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51A1E83E2C1AD699007754CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */,
+				519D52E32C21E0E800EDC9C7 /* offers.json in Resources */,
+				51757FE42C2C03EF002BB483 /* flights.json in Resources */,
+				51A1E84B2C1AD69A007754CE /* Preview Assets.xcassets in Resources */,
+				5171A95C2C329E86009DD663 /* SF-Pro-Display-Medium.otf in Resources */,
+				51A1E8482C1AD69A007754CE /* Assets.xcassets in Resources */,
+				5171A9582C329D5D009DD663 /* SF-Pro-Display-Regular.otf in Resources */,
+				51757FEC2C2C41D8002BB483 /* allTickets.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E84E2C1AD69A007754CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E8582C1AD69B007754CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51A1E83C2C1AD699007754CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51757FE82C2C0CF6002BB483 /* DirectFlightModel.swift in Sources */,
+				51757FF02C2C79D0002BB483 /* ShowAllTicketsView.swift in Sources */,
+				51757FF22C2C89DB002BB483 /* TikcketItem.swift in Sources */,
+				51ACA29E2C22D3FF00EC050D /* Extention + Color.swift in Sources */,
+				517854CF2C2D74BE0054DE63 /* AllTicketsInfoModel.swift in Sources */,
+				516BFD1C2C2DE97A000A0B63 /* GlobalState.swift in Sources */,
+				519D52E72C21E1B200EDC9C7 /* ColabOffersModel.swift in Sources */,
+				519D52E52C21E17C00EDC9C7 /* JSONColabOffersReader.swift in Sources */,
+				51B625942C2EA6F8007DA70A /* SearchStartedView.swift in Sources */,
+				51A1E8462C1AD699007754CE /* StartView.swift in Sources */,
+				51757FEA2C2C166C002BB483 /* JSONTicketsOffersReader.swift in Sources */,
+				51BE57D22C2EF51800B8D6F1 /* SearchExampleItem.swift in Sources */,
+				51BE57D42C2F00A200B8D6F1 /* Extention + Character.swift in Sources */,
+				51ACA29C2C22BFD300EC050D /* WhereToGoItem.swift in Sources */,
+				517854D12C2D75790054DE63 /* JSONShowAllTicketsReader.swift in Sources */,
+				51A1E8442C1AD699007754CE /* Tickets_FinderApp.swift in Sources */,
+				51757FE62C2C0B0C002BB483 /* DirectFlightItem.swift in Sources */,
+				51ACA29A2C22A9AF00EC050D /* WhereToGoHintsView.swift in Sources */,
+				51BFEFB42C1CAC6A0097585A /* MusicOfferItem.swift in Sources */,
+				5176DF312C24179000CA56AB /* WhereToGoModalView.swift in Sources */,
+				51EF7B9B2C1DA1C70016177C /* RootView.swift in Sources */,
+				51BE57D62C2F0E3900B8D6F1 /* DataManager.swift in Sources */,
+				51B625962C2ECB96007DA70A /* Calculate.swift in Sources */,
+				516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */,
+				517759D52C295FCF00AD40E2 /* DatePopoverView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E84C2C1AD69A007754CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1E8552C1AD69A007754CE /* Tickets_FinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1E8562C1AD69B007754CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1E8612C1AD69B007754CE /* Tickets_FinderUITestsLaunchTests.swift in Sources */,
+				51A1E85F2C1AD69B007754CE /* Tickets_FinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51A1E8522C1AD69A007754CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51A1E83F2C1AD699007754CE /* Tickets Finder */;
+			targetProxy = 51A1E8512C1AD69A007754CE /* PBXContainerItemProxy */;
+		};
+		51A1E85C2C1AD69B007754CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51A1E83F2C1AD699007754CE /* Tickets Finder */;
+			targetProxy = 51A1E85B2C1AD69B007754CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		51A1E8622C1AD69B007754CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51A1E8632C1AD69B007754CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51A1E8652C1AD69B007754CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tickets Finder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tickets-Finder-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51A1E8662C1AD69B007754CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tickets Finder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tickets-Finder-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-Finder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51A1E8682C1AD69B007754CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tickets Finder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tickets Finder";
+			};
+			name = Debug;
+		};
+		51A1E8692C1AD69B007754CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tickets Finder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tickets Finder";
+			};
+			name = Release;
+		};
+		51A1E86B2C1AD69B007754CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tickets Finder";
+			};
+			name = Debug;
+		};
+		51A1E86C2C1AD69B007754CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "onlyMe.Tickets-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tickets Finder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51A1E83B2C1AD699007754CE /* Build configuration list for PBXProject "Tickets Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1E8622C1AD69B007754CE /* Debug */,
+				51A1E8632C1AD69B007754CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51A1E8642C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1E8652C1AD69B007754CE /* Debug */,
+				51A1E8662C1AD69B007754CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51A1E8672C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1E8682C1AD69B007754CE /* Debug */,
+				51A1E8692C1AD69B007754CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51A1E86A2C1AD69B007754CE /* Build configuration list for PBXNativeTarget "Tickets FinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1E86B2C1AD69B007754CE /* Debug */,
+				51A1E86C2C1AD69B007754CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51A1E8382C1AD699007754CE /* Project object */;
+}

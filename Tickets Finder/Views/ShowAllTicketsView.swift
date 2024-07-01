@@ -18,7 +18,6 @@ struct ShowAllTicketsView: View {
             
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, content: {
                 HStack(content: {
-                    
                     VStack(spacing: 4, content: {
                         Button (action: {
                             global.correntState = .two
@@ -30,20 +29,19 @@ struct ShowAllTicketsView: View {
                                 .tint(Color(hex: 0x2261BC))
                         })
                     })
-                    
-                    VStack(alignment: .leading, spacing: 4, content: {
-                        Text("\(global.fromWhereString)-\(global.toWhereString)")
-                            .font(Font.custom("SFProDisplay-Medium", size: 16))
-                            .bold()
-                        Text("\(global.flightDate, format: .dateTime.day()) \(global.flightDate, format: .dateTime.month()), 1 пассажир").textCase(.lowercase)
-                            .foregroundStyle(Color(hex: 0x9F9F9F))
-                            .font(Font.custom("SFProDisplay-Regular", size: 14))
-                    })
-                    
+                        VStack(alignment: .leading, spacing: 4, content: {
+                            Text("\(global.fromWhereString)-\(global.toWhereString)")
+                                .font(Font.custom("SFProDisplay-Medium", size: 16))
+                                .bold()
+                            Text("\(global.flightDate, format: .dateTime.day()) \(global.flightDate, format: .dateTime.month()), 1 пассажир").textCase(.lowercase)
+                                .foregroundStyle(Color(hex: 0x9F9F9F))
+                                .font(Font.custom("SFProDisplay-Regular", size: 14))
+                        })
+                        .padding(.vertical, 8)
+                   
                     Spacer()
                     
                 })
-                .frame(height: 56)
                 .background(Color(hex: 0x242529))
                 .padding(.horizontal)
                 .padding(.top)

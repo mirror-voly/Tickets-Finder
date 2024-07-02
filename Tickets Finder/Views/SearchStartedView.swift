@@ -136,8 +136,10 @@ struct SearchStartedView: View {
                                     .foregroundColor(Color(hex: 0x9F9F9F))
                             } else {
                                 Image("i10")
-                                    .padding(.leading)
+                                    .resizable()
+                                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                                     .frame(width: 16, height: 16)
+                                    .padding(.leading)
                                 Text ("обратно")
                                     .font(Font(.init(.label, size: 14)))
                                     .italic()

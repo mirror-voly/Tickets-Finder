@@ -14,6 +14,7 @@ struct Tickets_FinderApp: App {
     var body: some Scene {
         WindowGroup {
             CoordinatorView()
+                .environment(\.colorScheme, .dark)
         }
     }
 }

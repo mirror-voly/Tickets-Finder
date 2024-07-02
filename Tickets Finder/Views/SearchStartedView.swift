@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchStartedView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
-    @ObservedObject var tiketsOffer = JSONTicketsOffersReader()
+    @ObservedObject private var tiketsOffer = JSONTicketsOffersReader()
     @FocusState private var focusedField: Field?
     
     @State private var datePickerIsPresented = false

@@ -10,7 +10,7 @@ import SwiftUI
 class Coordinator: ObservableObject {
     
     enum Page {
-        case one, two, three
+        case zero, one, two, three
     }
 
     @Published var modalWindowIsOpened = false
@@ -30,6 +30,8 @@ class Coordinator: ObservableObject {
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
+        case .zero:
+            EmptyView()
         case .one:
             StartView()
         case .two:

@@ -11,7 +11,7 @@ import SwiftUI
 struct TikcketItem: View {
     
     let ticket: Ticket
-    let calculate = Calculate()
+    private let calculate = Calculate()
     
     var body: some View {
         

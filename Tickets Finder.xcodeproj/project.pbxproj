@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5169394C2C33E2E900331153 /* TabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169394B2C33E2E900331153 /* TabViewItem.swift */; };
 		516BFD1C2C2DE97A000A0B63 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */; };
 		516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D54D42C20A1540016AAC2 /* EmptyView.swift */; };
 		5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5169394B2C33E2E900331153 /* TabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItem.swift; sourceTree = "<group>"; };
 		516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		516D54D42C20A1540016AAC2 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				51ACA29B2C22BFD300EC050D /* WhereToGoItem.swift */,
 				51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */,
 				51BE57D12C2EF51800B8D6F1 /* SearchExampleItem.swift */,
+				5169394B2C33E2E900331153 /* TabViewItem.swift */,
 			);
 			path = "View Items";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				51757FEA2C2C166C002BB483 /* JSONTicketsOffersReader.swift in Sources */,
 				51BE57D22C2EF51800B8D6F1 /* SearchExampleItem.swift in Sources */,
 				51BE57D42C2F00A200B8D6F1 /* Extention + Character.swift in Sources */,
+				5169394C2C33E2E900331153 /* TabViewItem.swift in Sources */,
 				51ACA29C2C22BFD300EC050D /* WhereToGoItem.swift in Sources */,
 				517854D12C2D75790054DE63 /* JSONShowAllTicketsReader.swift in Sources */,
 				51A1E8442C1AD699007754CE /* Tickets_FinderApp.swift in Sources */,

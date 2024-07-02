@@ -10,7 +10,7 @@ import SwiftUI
 struct MusicOfferItem: View {
     
     let offerInfo: Offer
-    let calculate = Calculate()
+    private let calculate = Calculate()
     
     var body: some View {
         

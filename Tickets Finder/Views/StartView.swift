@@ -10,7 +10,7 @@ import SwiftUI
 struct StartView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
-    @ObservedObject var colabOffers = JSONColabOffersReader()
+    @ObservedObject private var colabOffers = JSONColabOffersReader()
     @FocusState private var focusedField: Field?
     private let dataManager = DataManager()
     
@@ -32,7 +32,6 @@ struct StartView: View {
     
     var body: some View {
         
-        
         GeometryReader(content: { geometry in
             VStack {
                 
@@ -42,7 +41,6 @@ struct StartView: View {
                         .font(Font.custom("SFProDisplay-Semibold", size: 22))
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
-                        
                 })
                 
                 VStack {

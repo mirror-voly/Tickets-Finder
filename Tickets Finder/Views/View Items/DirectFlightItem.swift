@@ -10,7 +10,7 @@ import SwiftUI
 struct DirectFlightItem: View {
     
     let ticket: TicketsOffer
-    let calculate = Calculate()
+    private let calculate = Calculate()
     
     var body: some View {
         let circleColor: Color = {

@@ -94,7 +94,7 @@ struct WhereToGoModalView: View {
             }
         })
         .ignoresSafeArea(.keyboard)
-        
+        .environment(\.colorScheme, .dark)
     }
 }
 

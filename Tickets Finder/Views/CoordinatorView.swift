@@ -10,7 +10,6 @@ import SwiftUI
 struct CoordinatorView: View {
     
     @StateObject private var coordinator = Coordinator()
-    private let dataManager = DataManager()
     
     var body: some View {
         
@@ -51,14 +50,7 @@ struct CoordinatorView: View {
             
         })
         .environmentObject(coordinator)
-        .onAppear() {
-            if let names = dataManager.loadData() {
-                coordinator.fromWhereString = names[0]
-                coordinator.toWhereString = names[1]
-            }
-        }
         
-
     }
 }
 

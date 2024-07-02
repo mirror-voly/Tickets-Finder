@@ -9,6 +9,8 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
     
+    let dataMeneger = DataManager()
+    
     enum Page {
         case one, two, three
     }
@@ -22,6 +24,12 @@ class Coordinator: ObservableObject {
     @Published var flightBackDate = Date()
     
     @Published var currentPage = Page.one
+    
+    func setLoadedData() {
+        guard let loadedData = dataMeneger.loadData() else { return }
+        fromWhereString = loadedData[0]
+        toWhereString = loadedData[1]
+    }
     
     func changePage( page: Page) {
         self.currentPage = page
@@ -46,4 +54,9 @@ class Coordinator: ObservableObject {
             ShowAllTicketsView()
         }
     }
+    
+    init() {
+        setLoadedData()
+    }
+    
 }

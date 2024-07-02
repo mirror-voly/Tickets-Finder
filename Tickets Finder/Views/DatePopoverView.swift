@@ -44,8 +44,9 @@ struct DatePopoverView: View {
             
             
             
-        }.background(Color.clear)
-        
+        }
+        .background(Color.clear)
+        .environment(\.colorScheme, .dark)
         
     }
 }

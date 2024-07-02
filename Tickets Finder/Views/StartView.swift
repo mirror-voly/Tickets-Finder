@@ -12,7 +12,6 @@ struct StartView: View {
     @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject private var colabOffers = JSONColabOffersReader()
     @FocusState private var focusedField: Field?
-    private let dataManager = DataManager()
     
     private enum Field: Int, Hashable {
         case fromWhereTextField
@@ -20,7 +19,6 @@ struct StartView: View {
     }
     
     private func editingIsDone() {
-        dataManager.saveData(fromWhereString: coordinator.fromWhereString, toWhereString: coordinator.toWhereString)
         focusedField = nil
     }
     
@@ -70,7 +68,6 @@ struct StartView: View {
                             TextField("Куда - Турция", text:  $coordinator.toWhereString)
                                 .onTapGesture {
                                     self.coordinator.openSheet()
-                                    tryToStartSearch()
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
                             

@@ -39,13 +39,9 @@ struct WhereToGoModalView: View {
                                 .tint(.white)
                                 .padding(.leading)
                             TextField("Откуда - Москва", text: $coordinator.fromWhereString)
-                                .onSubmit(of: .text) {
-                                    if coordinator.toWhereString == "" {
-                                        focusedField = .toWhereTextField
-                                    }
-                                }
-                                .focused($focusedField, equals: .fromWhereTextField)
-                        })
+                        }).onTapGesture {
+                            coordinator.dismissSheet()
+                        }
                         
                         Divider()
                         

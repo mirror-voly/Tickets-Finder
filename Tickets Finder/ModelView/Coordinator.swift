@@ -10,10 +10,9 @@ import SwiftUI
 class Coordinator: ObservableObject {
     
     enum Page {
-        case zero, one, two, three
+        case one, two, three
     }
     
-    @Published var path = NavigationPath()
     @Published var modalWindowIsOpened = false
     
     @Published var fromWhereString = ""
@@ -28,11 +27,17 @@ class Coordinator: ObservableObject {
         self.currentPage = page
     }
     
+    func openSheet() {
+        self.modalWindowIsOpened = true
+    }
+    
+    func dismissSheet() {
+        self.modalWindowIsOpened = false
+    }
+    
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
-        case .zero:
-            EmptyView()
         case .one:
             StartView()
         case .two:

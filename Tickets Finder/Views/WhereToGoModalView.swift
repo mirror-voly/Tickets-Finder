@@ -59,7 +59,7 @@ struct WhereToGoModalView: View {
                             TextField("Куда - Турция", text:  $coordinator.toWhereString)
                                 .onSubmit(of: /*@START_MENU_TOKEN@*/.text/*@END_MENU_TOKEN@*/) {
                                     editingIsDone()
-                                    coordinator.modalWindowIsOpened = false
+                                    coordinator.dismissSheet()
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
                                 .onAppear(perform: {

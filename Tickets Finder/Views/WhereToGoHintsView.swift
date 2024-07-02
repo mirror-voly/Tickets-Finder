@@ -10,30 +10,34 @@ import SwiftUI
 struct WhereToGoHintsView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
-    @State private var openNextView = false
+    @State private var nextViewOpened = false
+    
+    private func openEmptyView() {
+        self.nextViewOpened = true
+    }
     
     var body: some View {
         HStack(alignment: .top, spacing: 16, content: {
             WhereToGoItem(buttonImageName: "i22", buttonText: "Сложный маршрут", buttonBackgroundColor: Color(hex: 0x3A633B))
                 .onTapGesture(perform: {
-                    self.openNextView = true
+                    openEmptyView()
                     })
             WhereToGoItem(buttonImageName: "i34", buttonText: "Куда угоднo", buttonBackgroundColor: (Color(hex: 0x2261BC)))
                 .onTapGesture(perform: {
                     coordinator.toWhereString = "Куда угодно"
-                    coordinator.modalWindowIsOpened = false
+                    coordinator.dismissSheet()
                     })
             WhereToGoItem(buttonImageName: "i21", buttonText: "Выходные", buttonBackgroundColor: (Color(hex: 0x00427D)))
                 .onTapGesture(perform: {
-                    self.openNextView = true
+                    openEmptyView()
                     })
             WhereToGoItem(buttonImageName: "i15", buttonText: "Горячие билеты", buttonBackgroundColor: Color(hex: 0xFF5E5E))
                 .onTapGesture(perform: {
-                    self.openNextView = true
+                    openEmptyView()
                     })
         })
         .padding(.horizontal)
-        .sheet(isPresented: $openNextView, content: {
+        .sheet(isPresented: $nextViewOpened, content: {
             EmptyView()
         })
         
@@ -46,7 +50,8 @@ struct WhereToGoHintsView: View {
             .padding()
             .background(Color(hex: 0x2F3035))
             .clipShape(.rect(cornerRadius: 16))
-        }.padding()
+        }
+        .padding()
         
     }
 }

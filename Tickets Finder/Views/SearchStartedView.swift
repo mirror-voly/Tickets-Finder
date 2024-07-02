@@ -55,7 +55,7 @@ struct SearchStartedView: View {
                                 })
                                 .onSubmit {
                                     if coordinator.fromWhereString != "" && coordinator.toWhereString == "" {
-                                        coordinator.modalWindowIsOpened = true
+                                        coordinator.openSheet()
                                     }
                                     startSearch()
                                 }
@@ -85,7 +85,7 @@ struct SearchStartedView: View {
                                     }
                                 })
                                 .onTapGesture {
-                                    coordinator.modalWindowIsOpened = true
+                                    coordinator.openSheet()
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
                             VStack {

@@ -31,7 +31,7 @@ struct SearchExampleItem: View {
         }).frame(width: 296, height: 56)
             .onTapGesture {
                 coordinator.toWhereString = cityName
-                coordinator.modalWindowIsOpened = false
+                coordinator.dismissSheet()
             }
         
         Divider()

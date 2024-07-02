@@ -59,7 +59,7 @@ struct StartView: View {
                                 .onSubmit {
                                     editingIsDone()
                                     if coordinator.fromWhereString != "" && coordinator.toWhereString == "" {
-                                        self.coordinator.modalWindowIsOpened = true
+                                        self.coordinator.openSheet()
                                     }
                                     tryToStartSearch()
                                 }
@@ -69,7 +69,7 @@ struct StartView: View {
                             
                             TextField("Куда - Турция", text:  $coordinator.toWhereString)
                                 .onTapGesture {
-                                    self.coordinator.modalWindowIsOpened = true
+                                    self.coordinator.openSheet()
                                     tryToStartSearch()
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)

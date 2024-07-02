@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhereToGoHintsView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     @State private var openNextView = false
     
     var body: some View {

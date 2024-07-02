@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Tickets_FinderApp: App {
     
-    @StateObject private var global = GlobalState()
+    @StateObject private var global = Coordinator()
     var body: some Scene {
         WindowGroup {
             RootView()

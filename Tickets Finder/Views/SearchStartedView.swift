@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchStartedView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     @ObservedObject var tiketsOffer = JSONTicketsOffersReader()
     @FocusState private var focusedField: Field?
     
@@ -28,7 +28,7 @@ struct SearchStartedView: View {
     
     private func startSearch() {
         if global.fromWhereString != "" && global.toWhereString != "" {
-            global.correntState = .two
+            global.showPage = .two
         }
     }
     
@@ -39,7 +39,7 @@ struct SearchStartedView: View {
                 HStack(content: {
                     
                     Button("", image: ImageResource(name: "i3", bundle: .main)) {
-                        global.correntState = .one
+                        global.showPage = .one
                     } .padding(.leading)
                     VStack(content: {
                         
@@ -91,7 +91,7 @@ struct SearchStartedView: View {
                             VStack {
                                 Button(action: {
                                     global.toWhereString = ""
-                                    global.correntState = .one
+                                    global.showPage = .one
                                 }, label: {
                                     Image("i17")
                                         .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
@@ -220,7 +220,7 @@ struct SearchStartedView: View {
             
             VStack(alignment: .center, content: {
                 Button(action: {
-                    global.correntState = .three
+                    global.showPage = .three
                 }, label: {
                     Text("Посмотреть все билеты")
                         .padding()

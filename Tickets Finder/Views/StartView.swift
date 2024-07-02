@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     @ObservedObject var colabOffers = JSONColabOffersReader()
     @FocusState private var focusedField: Field?
     private let dataManager = DataManager()
@@ -26,7 +26,7 @@ struct StartView: View {
     
     private func tryToStartSearch() {
         if global.fromWhereString != "" && global.toWhereString != "" {
-            global.correntState = .two
+            global.showPage = .two
         }
     }
     

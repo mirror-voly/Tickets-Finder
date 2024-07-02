@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchExampleItem: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     let imageName: String
     let cityName: String
     

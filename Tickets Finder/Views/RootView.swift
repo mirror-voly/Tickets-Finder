@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     private let dataManager = DataManager()
     
     var body: some View {
@@ -17,19 +17,19 @@ struct RootView: View {
         
         TabView(selection: .constant(0),
                 content: {
-            if global.correntState == .one {
+            if global.showPage == .one {
                 StartView().tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")
                         .font(Font.custom("SFProDisplay-Regular", size: 10))
                 }
-            } else if global.correntState == .two {
+            } else if global.showPage == .two {
                 SearchStartedView().tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")
                         .font(Font.custom("SFProDisplay-Regular", size: 10))
                 }
-            } else if global.correntState == .three {
+            } else if global.showPage == .three {
                 ShowAllTicketsView().tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")

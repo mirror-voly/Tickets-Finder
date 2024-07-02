@@ -1,5 +1,5 @@
 //
-//  GlobalState.swift
+//  Coordinator.swift
 //  Tickets Finder
 //
 //  Created by mix on 27.06.2024.
@@ -7,15 +7,13 @@
 
 import Foundation
 
-class GlobalState: ObservableObject {
+class Coordinator: ObservableObject {
     
-    enum FirstScreenState {
-        case one
-        case two
-        case three
+    enum Page {
+        case one, two, three
     }
 
-    @Published var correntState = FirstScreenState.one
+    @Published var showPage = Page.one
     @Published var modalWindowIsOpened = false
     
     @Published var fromWhereString = ""

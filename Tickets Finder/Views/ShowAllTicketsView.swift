@@ -10,7 +10,7 @@ import SwiftUI
 struct ShowAllTicketsView: View {
     
     @ObservedObject private var tikets = JSONShowAllTicketsReader()
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     
     var body: some View {
         
@@ -20,7 +20,7 @@ struct ShowAllTicketsView: View {
                 HStack(content: {
                     VStack(spacing: 4, content: {
                         Button (action: {
-                            global.correntState = .two
+                            global.showPage = .two
                         }, label: {
                             Image("i3")
                                 .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)

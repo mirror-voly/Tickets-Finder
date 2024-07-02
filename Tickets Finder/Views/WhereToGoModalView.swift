@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhereToGoModalView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     @FocusState private var focusedField: Field?
     
     private enum Field: Int, Hashable {

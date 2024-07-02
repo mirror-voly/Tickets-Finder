@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DatePopoverView: View {
     
-    @EnvironmentObject private var global: GlobalState
+    @EnvironmentObject private var global: Coordinator
     @Binding var datePickerPresented: Bool
     var datePickerIsOnFlightDate: Bool
     

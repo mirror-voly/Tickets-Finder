@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		516BFD1C2C2DE97A000A0B63 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */; };
+		516BFD1C2C2DE97A000A0B63 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */; };
 		516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D54D42C20A1540016AAC2 /* EmptyView.swift */; };
 		5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */; };
 		5171A9582C329D5D009DD663 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */; };
@@ -64,7 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		516D54D42C20A1540016AAC2 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		519D52EA2C21F1A500EDC9C7 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
-				516BFD1B2C2DE97A000A0B63 /* GlobalState.swift */,
+				516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */,
 				51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */,
 				51B625952C2ECB96007DA70A /* Calculate.swift */,
 				519D52E42C21E17C00EDC9C7 /* JSONColabOffersReader.swift */,
@@ -409,7 +409,7 @@
 				51757FF22C2C89DB002BB483 /* TikcketItem.swift in Sources */,
 				51ACA29E2C22D3FF00EC050D /* Extention + Color.swift in Sources */,
 				517854CF2C2D74BE0054DE63 /* AllTicketsInfoModel.swift in Sources */,
-				516BFD1C2C2DE97A000A0B63 /* GlobalState.swift in Sources */,
+				516BFD1C2C2DE97A000A0B63 /* Coordinator.swift in Sources */,
 				519D52E72C21E1B200EDC9C7 /* ColabOffersModel.swift in Sources */,
 				519D52E52C21E17C00EDC9C7 /* JSONColabOffersReader.swift in Sources */,
 				51B625942C2EA6F8007DA70A /* SearchStartedView.swift in Sources */,

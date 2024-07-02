@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     private let dataManager = DataManager()
     
     var body: some View {
@@ -17,20 +17,20 @@ struct RootView: View {
         
         TabView(selection: .constant(0),
                 content: {
-            if global.showPage == .one {
-                StartView().tabItem {
+            if coordinator.currentPage == .one {
+                coordinator.build(page: .one).tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")
                         .font(Font.custom("SFProDisplay-Regular", size: 10))
                 }
-            } else if global.showPage == .two {
-                SearchStartedView().tabItem {
+            } else if coordinator.currentPage == .two {
+                coordinator.build(page: .two).tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")
                         .font(Font.custom("SFProDisplay-Regular", size: 10))
                 }
-            } else if global.showPage == .three {
-                ShowAllTicketsView().tabItem {
+            } else if coordinator.currentPage == .three {
+                coordinator.build(page: .three).tabItem {
                     Image("i20").renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     Text("Авиабилеты")
                         .font(Font.custom("SFProDisplay-Regular", size: 10))
@@ -59,8 +59,8 @@ struct RootView: View {
             }
         }).onAppear() {
             if let names = dataManager.loadData() {
-                global.fromWhereString = names[0]
-                global.toWhereString = names[1]
+                coordinator.fromWhereString = names[0]
+                coordinator.toWhereString = names[1]
             
             }
         }

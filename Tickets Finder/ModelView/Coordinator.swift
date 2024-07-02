@@ -5,7 +5,7 @@
 //  Created by mix on 27.06.2024.
 //
 
-import Foundation
+import SwiftUI
 
 class Coordinator: ObservableObject {
     
@@ -13,7 +13,6 @@ class Coordinator: ObservableObject {
         case one, two, three
     }
 
-    @Published var showPage = Page.one
     @Published var modalWindowIsOpened = false
     
     @Published var fromWhereString = ""
@@ -21,4 +20,22 @@ class Coordinator: ObservableObject {
     
     @Published var flightDate = Date()
     @Published var flightBackDate = Date()
+    
+    @Published var currentPage = Page.one
+    
+    func changePage( page: Page) {
+        self.currentPage = page
+    }
+    
+    @ViewBuilder
+    func build(page: Page) -> some View {
+        switch page {
+        case .one:
+            StartView()
+        case .two:
+            SearchStartedView()
+        case .three:
+            ShowAllTicketsView()
+        }
+    }
 }

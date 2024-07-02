@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DatePopoverView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     @Binding var datePickerPresented: Bool
     var datePickerIsOnFlightDate: Bool
     
@@ -18,11 +18,11 @@ struct DatePopoverView: View {
         GeometryReader { geo in
             if datePickerIsOnFlightDate {
                 VStack {
-                    DatePicker("", selection: $global.flightDate, in: Date()..., displayedComponents: .date)
-                        .onChange(of: global.flightDate) {
+                    DatePicker("", selection: $coordinator.flightDate, in: Date()..., displayedComponents: .date)
+                        .onChange(of: coordinator.flightDate) {
                             
-                            if global.flightDate > global.flightBackDate {
-                                global.flightBackDate = global.flightDate
+                            if coordinator.flightDate > coordinator.flightBackDate {
+                                coordinator.flightBackDate = coordinator.flightDate
                             }
                             datePickerPresented = false
                         }
@@ -32,8 +32,8 @@ struct DatePopoverView: View {
                 }
             } else {
                 VStack {
-                    DatePicker("", selection: $global.flightBackDate, in: global.flightDate..., displayedComponents: .date)
-                        .onChange(of: global.flightBackDate) {
+                    DatePicker("", selection: $coordinator.flightBackDate, in: coordinator.flightDate..., displayedComponents: .date)
+                        .onChange(of: coordinator.flightBackDate) {
                             datePickerPresented = false
                         }
                         .datePickerStyle(.graphical)

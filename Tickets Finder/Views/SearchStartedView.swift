@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchStartedView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var tiketsOffer = JSONTicketsOffersReader()
     @FocusState private var focusedField: Field?
     
@@ -27,8 +27,8 @@ struct SearchStartedView: View {
     }
     
     private func startSearch() {
-        if global.fromWhereString != "" && global.toWhereString != "" {
-            global.showPage = .two
+        if coordinator.fromWhereString != "" && coordinator.toWhereString != "" {
+            coordinator.changePage(page: .two)
         }
     }
     
@@ -39,30 +39,30 @@ struct SearchStartedView: View {
                 HStack(content: {
                     
                     Button("", image: ImageResource(name: "i3", bundle: .main)) {
-                        global.showPage = .one
+                        coordinator.changePage(page: .one)
                     } .padding(.leading)
                     VStack(content: {
                         
                         HStack(content: {
-                            TextField("Откуда - Москва", text: $global.fromWhereString)
-                                .onChange(of: global.fromWhereString, { oldValue, newValue in
+                            TextField("Откуда - Москва", text: $coordinator.fromWhereString)
+                                .onChange(of: coordinator.fromWhereString, { oldValue, newValue in
                                     if !newValue.isEmpty {
                                         let filteredText = newValue.filter { $0.isCyrillic }
                                         if filteredText != newValue {
-                                            global.fromWhereString = filteredText
+                                            coordinator.fromWhereString = filteredText
                                         }
                                     }
                                 })
                                 .onSubmit {
-                                    if global.fromWhereString != "" && global.toWhereString == "" {
-                                        global.modalWindowIsOpened = true
+                                    if coordinator.fromWhereString != "" && coordinator.toWhereString == "" {
+                                        coordinator.modalWindowIsOpened = true
                                     }
                                     startSearch()
                                 }
                                 .focused($focusedField, equals: .fromWhereTextField)
                             VStack {
                                 Button(action: {
-                                    (global.fromWhereString, global.toWhereString) = (global.toWhereString, global.fromWhereString)
+                                    (coordinator.fromWhereString, coordinator.toWhereString) = (coordinator.toWhereString, coordinator.fromWhereString)
                                 }, label: {
                                     Image("i18")
                                         .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
@@ -75,23 +75,23 @@ struct SearchStartedView: View {
                         Divider()
                         
                         HStack(content: {
-                            TextField("Куда - Турция", text:  $global.toWhereString)
-                                .onChange(of: global.toWhereString, { oldValue, newValue in
+                            TextField("Куда - Турция", text:  $coordinator.toWhereString)
+                                .onChange(of: coordinator.toWhereString, { oldValue, newValue in
                                     if !newValue.isEmpty {
                                         let filteredText = newValue.filter { $0.isCyrillic }
                                         if filteredText != newValue {
-                                            global.toWhereString = filteredText
+                                            coordinator.toWhereString = filteredText
                                         }
                                     }
                                 })
                                 .onTapGesture {
-                                    global.modalWindowIsOpened = true
+                                    coordinator.modalWindowIsOpened = true
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
                             VStack {
                                 Button(action: {
-                                    global.toWhereString = ""
-                                    global.showPage = .one
+                                    coordinator.toWhereString = ""
+                                    coordinator.changePage(page: .one)
                                 }, label: {
                                     Image("i17")
                                         .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
@@ -109,7 +109,7 @@ struct SearchStartedView: View {
                     .shadow(radius: 5, x: 0, y: 5)
             }
             
-            .sheet(isPresented: $global.modalWindowIsOpened, onDismiss: {
+            .sheet(isPresented: $coordinator.modalWindowIsOpened, onDismiss: {
                 editingIsDone()
                 startSearch()
             }, content: {
@@ -120,12 +120,12 @@ struct SearchStartedView: View {
                 HStack(alignment: .top, spacing: 8, content: {
                     HStack(spacing: 8, content: {
                         if !datePickerForward {
-                            Text ("\(global.flightBackDate, format: .dateTime.day()) \(global.flightBackDate, format: .dateTime.month())").textCase(.lowercase)
+                            Text ("\(coordinator.flightBackDate, format: .dateTime.day()) \(coordinator.flightBackDate, format: .dateTime.month())").textCase(.lowercase)
                                 .font(Font(.init(.label, size: 14)))
                                 .italic()
                                 .padding(.vertical, 8.0)
                                 .padding(.leading, 8.0)
-                            Text (", \(global.flightBackDate, format: .dateTime.weekday())").textCase(.lowercase)
+                            Text (", \(coordinator.flightBackDate, format: .dateTime.weekday())").textCase(.lowercase)
                                 .font(Font(.init(.label, size: 14)))
                                 .italic()
                                 .padding(.leading, -8.0)
@@ -152,10 +152,10 @@ struct SearchStartedView: View {
                     
                     
                     HStack(spacing: 8.0, content: {
-                        Text ("\(global.flightDate, format: .dateTime.day()) \(global.flightDate, format: .dateTime.month())").textCase(.lowercase)
+                        Text ("\(coordinator.flightDate, format: .dateTime.day()) \(coordinator.flightDate, format: .dateTime.month())").textCase(.lowercase)
                             .padding(.vertical, 8.0)
                             .padding(.leading, 8.0)
-                        Text (", \(global.flightDate, format: .dateTime.weekday())").textCase(.lowercase)
+                        Text (", \(coordinator.flightDate, format: .dateTime.weekday())").textCase(.lowercase)
                             .padding(.leading, -8.0)
                             .padding(.trailing, 8.0)
                             .foregroundColor(Color(hex: 0x9F9F9F))
@@ -220,7 +220,7 @@ struct SearchStartedView: View {
             
             VStack(alignment: .center, content: {
                 Button(action: {
-                    global.showPage = .three
+                    coordinator.changePage(page: .three)
                 }, label: {
                     Text("Посмотреть все билеты")
                         .padding()

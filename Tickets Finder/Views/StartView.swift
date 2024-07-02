@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var colabOffers = JSONColabOffersReader()
     @FocusState private var focusedField: Field?
     private let dataManager = DataManager()
@@ -20,13 +20,13 @@ struct StartView: View {
     }
     
     private func editingIsDone() {
-        dataManager.saveData(fromWhereString: global.fromWhereString, toWhereString: global.toWhereString)
+        dataManager.saveData(fromWhereString: coordinator.fromWhereString, toWhereString: coordinator.toWhereString)
         focusedField = nil
     }
     
     private func tryToStartSearch() {
-        if global.fromWhereString != "" && global.toWhereString != "" {
-            global.showPage = .two
+        if coordinator.fromWhereString != "" && coordinator.toWhereString != "" {
+            coordinator.changePage(page: .two)
         }
     }
     
@@ -49,19 +49,19 @@ struct StartView: View {
                     HStack(content: {
                         Image("i26").padding(.leading)
                         VStack(content: {
-                            TextField("Откуда - Москва", text: $global.fromWhereString)
-                                .onChange(of: global.fromWhereString, { oldValue, newValue in
+                            TextField("Откуда - Москва", text: $coordinator.fromWhereString)
+                                .onChange(of: coordinator.fromWhereString, { oldValue, newValue in
                                     if !newValue.isEmpty {
                                         let filteredText = newValue.filter { $0.isCyrillic }
                                         if filteredText != newValue {
-                                            global.fromWhereString = filteredText
+                                            coordinator.fromWhereString = filteredText
                                         }
                                     }
                                 })
                                 .onSubmit {
                                     editingIsDone()
-                                    if global.fromWhereString != "" && global.toWhereString == "" {
-                                        self.global.modalWindowIsOpened = true
+                                    if coordinator.fromWhereString != "" && coordinator.toWhereString == "" {
+                                        self.coordinator.modalWindowIsOpened = true
                                     }
                                     tryToStartSearch()
                                 }
@@ -69,9 +69,9 @@ struct StartView: View {
                             
                             Divider()
                             
-                            TextField("Куда - Турция", text:  $global.toWhereString)
+                            TextField("Куда - Турция", text:  $coordinator.toWhereString)
                                 .onTapGesture {
-                                    self.global.modalWindowIsOpened = true
+                                    self.coordinator.modalWindowIsOpened = true
                                     tryToStartSearch()
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
@@ -87,7 +87,7 @@ struct StartView: View {
                 .background((Color(hex: 0x2F3035)))
                 .clipShape(.buttonBorder)
                 .padding()
-                .sheet(isPresented: $global.modalWindowIsOpened, onDismiss: {
+                .sheet(isPresented: $coordinator.modalWindowIsOpened, onDismiss: {
                     editingIsDone()
                     tryToStartSearch()
                 }, content: {

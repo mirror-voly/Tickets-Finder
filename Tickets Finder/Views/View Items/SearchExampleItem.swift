@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchExampleItem: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     let imageName: String
     let cityName: String
     
@@ -30,8 +30,8 @@ struct SearchExampleItem: View {
             Spacer()
         }).frame(width: 296, height: 56)
             .onTapGesture {
-                global.toWhereString = cityName
-                global.modalWindowIsOpened = false
+                coordinator.toWhereString = cityName
+                coordinator.modalWindowIsOpened = false
             }
         
         Divider()

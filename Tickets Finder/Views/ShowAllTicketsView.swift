@@ -10,7 +10,7 @@ import SwiftUI
 struct ShowAllTicketsView: View {
     
     @ObservedObject private var tikets = JSONShowAllTicketsReader()
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     
     var body: some View {
         
@@ -20,7 +20,7 @@ struct ShowAllTicketsView: View {
                 HStack(content: {
                     VStack(spacing: 4, content: {
                         Button (action: {
-                            global.showPage = .two
+                            coordinator.changePage(page: .two)
                         }, label: {
                             Image("i3")
                                 .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
@@ -30,10 +30,10 @@ struct ShowAllTicketsView: View {
                         })
                     })
                         VStack(alignment: .leading, spacing: 4, content: {
-                            Text("\(global.fromWhereString)-\(global.toWhereString)")
+                            Text("\(coordinator.fromWhereString)-\(coordinator.toWhereString)")
                                 .font(Font.custom("SFProDisplay-Medium", size: 16))
                                 .bold()
-                            Text("\(global.flightDate, format: .dateTime.day()) \(global.flightDate, format: .dateTime.month()), 1 пассажир").textCase(.lowercase)
+                            Text("\(coordinator.flightDate, format: .dateTime.day()) \(coordinator.flightDate, format: .dateTime.month()), 1 пассажир").textCase(.lowercase)
                                 .foregroundStyle(Color(hex: 0x9F9F9F))
                                 .font(Font.custom("SFProDisplay-Regular", size: 14))
                         })

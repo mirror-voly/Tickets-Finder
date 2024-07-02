@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhereToGoModalView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     @FocusState private var focusedField: Field?
     
     private enum Field: Int, Hashable {
@@ -38,9 +38,9 @@ struct WhereToGoModalView: View {
                                 .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                                 .tint(.white)
                                 .padding(.leading)
-                            TextField("Откуда - Москва", text: $global.fromWhereString)
+                            TextField("Откуда - Москва", text: $coordinator.fromWhereString)
                                 .onSubmit(of: .text) {
-                                    if global.toWhereString == "" {
+                                    if coordinator.toWhereString == "" {
                                         focusedField = .toWhereTextField
                                     }
                                 }
@@ -56,10 +56,10 @@ struct WhereToGoModalView: View {
                                 .tint(.white)
                                 .padding(.leading)
                             
-                            TextField("Куда - Турция", text:  $global.toWhereString)
+                            TextField("Куда - Турция", text:  $coordinator.toWhereString)
                                 .onSubmit(of: /*@START_MENU_TOKEN@*/.text/*@END_MENU_TOKEN@*/) {
                                     editingIsDone()
-                                    global.modalWindowIsOpened = false
+                                    coordinator.modalWindowIsOpened = false
                                 }
                                 .focused($focusedField, equals: .toWhereTextField)
                                 .onAppear(perform: {
@@ -68,7 +68,7 @@ struct WhereToGoModalView: View {
                             
                             VStack {
                                 Button(action: {
-                                    global.toWhereString = ""
+                                    coordinator.toWhereString = ""
                                 }, label: {
                                     Image("i17")
                                         .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhereToGoHintsView: View {
     
-    @EnvironmentObject private var global: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
     @State private var openNextView = false
     
     var body: some View {
@@ -20,8 +20,8 @@ struct WhereToGoHintsView: View {
                     })
             WhereToGoItem(buttonImageName: "i34", buttonText: "Куда угоднo", buttonBackgroundColor: (Color(hex: 0x2261BC)))
                 .onTapGesture(perform: {
-                    global.toWhereString = "Куда угодно"
-                    global.modalWindowIsOpened = false
+                    coordinator.toWhereString = "Куда угодно"
+                    coordinator.modalWindowIsOpened = false
                     })
             WhereToGoItem(buttonImageName: "i21", buttonText: "Выходные", buttonBackgroundColor: (Color(hex: 0x00427D)))
                 .onTapGesture(perform: {

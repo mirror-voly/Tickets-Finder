@@ -12,7 +12,8 @@ class Coordinator: ObservableObject {
     enum Page {
         case zero, one, two, three
     }
-
+    
+    @Published var path = NavigationPath()
     @Published var modalWindowIsOpened = false
     
     @Published var fromWhereString = ""

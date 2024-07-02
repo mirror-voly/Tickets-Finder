@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5169394C2C33E2E900331153 /* TabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169394B2C33E2E900331153 /* TabViewItem.swift */; };
+		5169394E2C33E78C00331153 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169394D2C33E78C00331153 /* CoordinatorView.swift */; };
 		516BFD1C2C2DE97A000A0B63 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */; };
 		516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D54D42C20A1540016AAC2 /* EmptyView.swift */; };
 		5171A9572C329CD1009DD663 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5171A9562C329CD1009DD663 /* SF-Pro-Display-Semibold.otf */; };
@@ -44,7 +45,6 @@
 		51BE57D42C2F00A200B8D6F1 /* Extention + Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE57D32C2F00A200B8D6F1 /* Extention + Character.swift */; };
 		51BE57D62C2F0E3900B8D6F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */; };
 		51BFEFB42C1CAC6A0097585A /* MusicOfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */; };
-		51EF7B9B2C1DA1C70016177C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF7B9A2C1DA1C70016177C /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		5169394B2C33E2E900331153 /* TabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItem.swift; sourceTree = "<group>"; };
+		5169394D2C33E78C00331153 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		516BFD1B2C2DE97A000A0B63 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		516D54D42C20A1540016AAC2 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		5171A9552C329ADE009DD663 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		51BE57D32C2F00A200B8D6F1 /* Extention + Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + Character.swift"; sourceTree = "<group>"; };
 		51BE57D52C2F0E3900B8D6F1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		51BFEFB32C1CAC6A0097585A /* MusicOfferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicOfferItem.swift; sourceTree = "<group>"; };
-		51EF7B9A2C1DA1C70016177C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		516D54DC2C20A1CB0016AAC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				51EF7B9A2C1DA1C70016177C /* RootView.swift */,
+				5169394D2C33E78C00331153 /* CoordinatorView.swift */,
 				51A1E8452C1AD699007754CE /* StartView.swift */,
 				5176DF302C24179000CA56AB /* WhereToGoModalView.swift */,
 				51B625932C2EA6F8007DA70A /* SearchStartedView.swift */,
@@ -408,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51757FE82C2C0CF6002BB483 /* DirectFlightModel.swift in Sources */,
+				5169394E2C33E78C00331153 /* CoordinatorView.swift in Sources */,
 				51757FF02C2C79D0002BB483 /* ShowAllTicketsView.swift in Sources */,
 				51757FF22C2C89DB002BB483 /* TikcketItem.swift in Sources */,
 				51ACA29E2C22D3FF00EC050D /* Extention + Color.swift in Sources */,
@@ -428,7 +429,6 @@
 				51ACA29A2C22A9AF00EC050D /* WhereToGoHintsView.swift in Sources */,
 				51BFEFB42C1CAC6A0097585A /* MusicOfferItem.swift in Sources */,
 				5176DF312C24179000CA56AB /* WhereToGoModalView.swift in Sources */,
-				51EF7B9B2C1DA1C70016177C /* RootView.swift in Sources */,
 				51BE57D62C2F0E3900B8D6F1 /* DataManager.swift in Sources */,
 				51B625962C2ECB96007DA70A /* Calculate.swift in Sources */,
 				516D54D52C20A1540016AAC2 /* EmptyView.swift in Sources */,
